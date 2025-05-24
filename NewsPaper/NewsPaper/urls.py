@@ -16,7 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.generic.base import TemplateView
+from News_Portal.views import NewsListView, NewsDetailView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', TemplateView.as_view(template_name='news/default.html'), name='home'),  # Домашняя страница
+    path('about/', TemplateView.as_view(template_name='news/about.html'), name='about'),  # Страница "О сайте"
+    path('contact/', TemplateView.as_view(template_name='news/contact.html'), name='contact'),  # Страница контактов
+    path('news/', NewsListView.as_view(), name='news_list'),  # Список всех новостей
+    path('news/<int:pk>/', NewsDetailView.as_view(), name='news_detail'),  # Детали одной новости
 ]

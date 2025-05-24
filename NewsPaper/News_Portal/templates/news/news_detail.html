@@ -1,0 +1,14 @@
+{% extends 'news/default.html' %}
+
+{% block content %}
+<div class="news-detail">
+    <h1>{{ news_item.title }}</h1>
+    <div class="meta-info">
+        Автор: {{ news_item.author }}
+        Дата публикации: {{ news_item.created_at|date:"d.m.Y H:i" }}
+    </div>
+    <hr/>
+    <p>{{ news_item.preview }}</p>
+    <!-- Здесь можем добавить комментарии, если нужно -->
+</div>
+{% endblock %}
