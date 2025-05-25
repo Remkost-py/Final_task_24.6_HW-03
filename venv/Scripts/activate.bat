@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\bezko\OneDrive\Documents\GitHub\Final_task_23.9_HW-03\venv
+set VIRTUAL_ENV=C:\Users\bezko\OneDrive\Documents\GitHub\Final_task_24.6_HW-03\venv
 
 if not defined PROMPT set PROMPT=$P$G
 

@@ -5,7 +5,7 @@
 
 <ul>
     {% for item in news_list %}
-        <li><a href="{% url 'news_detail' pk=item.pk %}">{{ item.title }} ({{ item.created_at|date:"d.m.Y H:i" }})</a></li>
+        <li><a href="{% url 'news_detail' pk=item.pk %}">{{ item.title|truncatechars:20 }} ({{ item.created_at|date:"d.m.Y H:i" }})</a></li>
     {% empty %}
         <p>Нет новостей.</p>
     {% endfor %}

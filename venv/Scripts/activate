@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\bezko\OneDrive\Documents\GitHub\Final_task_23.9_HW-03\venv"
+VIRTUAL_ENV="C:\Users\bezko\OneDrive\Documents\GitHub\Final_task_24.6_HW-03\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

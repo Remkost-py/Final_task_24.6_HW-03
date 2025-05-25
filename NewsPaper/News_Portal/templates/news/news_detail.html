@@ -4,11 +4,11 @@
 <div class="news-detail">
     <h1>{{ news_item.title }}</h1>
     <div class="meta-info">
-        Автор: {{ news_item.author }}
-        Дата публикации: {{ news_item.created_at|date:"d.m.Y H:i" }}
+        <p>Автор: {{ news_item.author.user.username }}</p>
+        <p>Дата публикации: {{ news_item.created_at|date:"d.m.Y H:i" }}</p>
     </div>
     <hr/>
-    <p>{{ news_item.preview }}</p>
+    <p>{{ news_item.content }}</p>
     <!-- Здесь можем добавить комментарии, если нужно -->
 </div>
 {% endblock %}
